@@ -1,0 +1,304 @@
+/* Main container */
+.services-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 80vh;
+  background-image:  url(/assets/imgs/hero/6-img.svg);;
+  padding: 20px;
+  gap: clamp(20px, 3vw, 40px);
+  margin-bottom: 0px;
+  position: relative;
+}
+
+/* Services columns */
+.services-left,
+.services-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+  width: clamp(120px, 20%, 300px);
+}
+
+/* Service items */
+.service-item {
+  text-align: center;
+  margin: 15px 0;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.service-number {
+  color: white;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.service-separator {
+  width: 80px;
+  height: 1.0px;
+  background-color: white;
+  margin: 0 auto 8px auto;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-text {
+  color: white;
+  font-size: clamp(0.6rem, 1vw, 0.8rem);
+  line-height: 1.2;
+  white-space: pre-line;
+  font-weight: 500;
+}
+
+/* Distortion hover effect */
+.service-item:hover {
+  animation: distortion 0.5s ease-in-out;
+}
+
+.service-item:hover .service-number {
+  text-shadow: 2px 0 0 rgba(255, 0, 0, 0.5), -2px 0 0 rgba(0, 255, 255, 0.5);
+  animation: glitch 0.3s ease-in-out infinite alternate;
+}
+
+.service-item:hover .service-separator {
+  transform: scaleX(1.2);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+.service-item:hover .service-text {
+  letter-spacing: 0.5px;
+  animation: textDistort 0.4s ease-in-out;
+}
+
+/* Define the animations */
+@keyframes distortion {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-2px) skewX(2deg);
+  }
+  40% {
+    transform: translateX(2px) skewX(-2deg);
+  }
+  60% {
+    transform: translateY(-1px);
+  }
+  80% {
+    transform: translateY(1px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 2px 0 0 rgba(255, 0, 0, 0.5), -2px 0 0 rgba(0, 255, 255, 0.5);
+  }
+  25% {
+    text-shadow: -2px 0 0 rgba(255, 0, 0, 0.5), 2px 0 0 rgba(0, 255, 255, 0.5);
+  }
+  50% {
+    text-shadow: 1px -1px 0 rgba(255, 0, 0, 0.5), -1px 1px 0 rgba(0, 255, 255, 0.5);
+  }
+  100% {
+    text-shadow: -1px -1px 0 rgba(255, 0, 0, 0.5), 1px 1px 0 rgba(0, 255, 255, 0.5);
+  }
+}
+
+@keyframes textDistort {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(1px);
+  }
+  50% {
+    transform: translateX(-1px);
+  }
+  75% {
+    transform: skewX(1deg);
+  }
+  100% {
+    transform: skewX(0);
+  }
+}
+
+/* Phone container */
+.phone-container {
+  position: relative;
+  width: clamp(120px, 16vw, 300px);
+  aspect-ratio: 9 / 18;
+  flex-shrink: 0;
+  max-height: 70vh;
+}
+
+/* Content image */
+.content-image {
+  position: absolute;
+  top: 14%;
+  left: 10%;
+  width: 75%;
+  height: 82%;
+  object-fit: cover;
+  border-top-left-radius: 2%;
+  border-top-right-radius: 2%;
+  border-bottom-left-radius: 9%;
+  border-bottom-right-radius: 9%;
+  z-index: 2;
+}
+
+/* Phone frame */
+.phone-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #545454;
+  background-image: url("/assets/imgs/service/iphone.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-mask-image: url("/assets/imgs/service/iphone.svg");
+  -webkit-mask-size: contain;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-image: url("/assets/imgs/service/iphone.svg");
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  z-index: 1;
+}
+
+/* Mobile services list (hidden by default) */
+.services-mobile {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Media queries for responsive layout */
+@media screen and (max-width: 992px) {
+  .services-container {
+    padding: 15px;
+    gap: 15px;
+  }
+  
+  .services-left,
+  .services-right {
+    width: 25%;
+  }
+  
+  .service-separator {
+    width: 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services-container {
+    flex-direction: column;
+    min-height: auto;
+    padding: 30px 15px;
+  }
+  
+  .services-left,
+  .services-right {
+    display: none;
+  }
+  
+  .phone-container {
+    width: clamp(200px, 50vw, 300px);
+    margin: 20px 0;
+  }
+  
+  .services-mobile {
+    display: flex;
+    padding: 20px 0;
+  }
+  
+  .services-mobile .service-item {
+    margin: 15px 0;
+  }
+  
+  .service-number {
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    margin-bottom: 10px;
+  }
+  
+  .service-separator {
+    width: 100px;
+    height: 2px;
+    margin-bottom: 10px;
+  }
+  
+  .service-text {
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    letter-spacing: 0.5px;
+  }
+}
+
+/* Target larger tablets and medium-sized screens (like the one in the image) */
+@media screen and (min-width: 740px) and (max-width: 1220px) {
+  .services-container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 20px;
+  }
+  
+  .services-left,
+  .services-right {
+    display: none;
+  }
+  
+  .phone-container {
+    width: clamp(250px, 40vw, 350px);
+    margin-bottom: 40px;
+  }
+  
+  .services-mobile {
+    display: flex;
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .service-number {
+    font-size: 2.5rem;
+  }
+  
+  .service-separator {
+    width: 120px;
+    height: 2px;
+    margin-bottom: 12px;
+  }
+  
+  .service-text {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .phone-container {
+    width: 65vw;
+    margin: 0px 0 0px 0;
+  }
+  
+  .services-container {
+    padding: 0px 15px;
+  }
+  
+  .services-mobile {
+    padding: 0;
+    gap: 10px;
+  }
+}

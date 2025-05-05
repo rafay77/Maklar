@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'TT-Norms-Bold';
+    src: url('/assets/fonts/ttnorms/TT-Norms-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ttnorms';
+    src: url('public/assets/fonts/ttnorms/TT-Norms-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+  
