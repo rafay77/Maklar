@@ -26,7 +26,7 @@ const AboutStory = () => {
               <div className="col-xxl-7 col-xl-7 col-lg-7 col-md-7">
                 <div className="story__text">
                   <p>
-                Your brand is your most powerful asset. At Maklar, we've spent over 6 years disrupting the digital landscape with bold strategies that connect brands with Gen Z audiences. Founded by forward-thinkers who refuse to follow conventional marketing paths, we've grown from a creative vision into a comprehensive digital powerhouse. Our journey is defined by breaking norms, setting trends, and transforming brands from ordinary to unforgettable in the digital space. We don't just aim for visibility—we create digital dominance.
+                Your brand is your most powerful asset. At Maklar, we have spent over 6 years disrupting the digital landscape with bold strategies that connect brands with Gen Z audiences. Founded by forward-thinkers who refuse to follow conventional marketing paths, we have grown from a creative vision into a comprehensive digital powerhouse. Our journey is defined by breaking norms, setting trends, and transforming brands from ordinary to unforgettable in the digital space. We do not just aim for visibility—we create digital dominance.
                   </p>
                 </div>
               </div>

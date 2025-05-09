@@ -51,7 +51,7 @@ const DigitalMarketingAbout = () => {
               <div className="sec-text-wrapper">
                 <div className="sec-text text-anim">
                   <p>
-                  We're digital disruptors who transform brands into market leaders. We thrive where others play it safe, blending innovative strategies with data-driven insights to create experiences that captivate Gen Z and beyond. Our expertise turns digital presence into digital dominance, crafting stories that don't just reach audiences—they command their attention and drive real results.
+                  We are digital disruptors who transform brands into market leaders. We thrive where others play it safe, blending innovative strategies with data-driven insights to create experiences that captivate Gen Z and beyond. Our expertise turns digital presence into digital dominance, crafting stories that do not just reach audiences—they command their attention and drive real results.
                   </p>
                   <div className="btn_wrapper">
                     <Link

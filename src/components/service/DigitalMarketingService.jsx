@@ -141,7 +141,7 @@ const DigitalMarketingService = () => {
                   </h3>
                   <div className="service__content-3">
                     <p>
-                    Crafting visually compelling brand identities and graphic assets that reflect your business's core values and enhance recognition.
+                    Crafting visually compelling brand identities and graphic assets that reflect your business core values and enhance recognition.
                     </p>
                   {/*   <ul className="">
                       <li>+ Logo Design</li>
